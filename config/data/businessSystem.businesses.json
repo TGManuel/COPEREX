@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "67dcfbff75e0d0356671bf1f"
+  },
+  "name": "prueba1",
+  "description": "el primer negocio de prueba",
+  "impact": "alto",
+  "years": 5,
+  "category": "comestibles",
+  "estado": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dcfc26c1316987cf8a7406"
+  },
+  "name": "prueba2",
+  "description": "el primer negocio de prueba",
+  "impact": "alto",
+  "years": 5,
+  "category": "comestibles",
+  "estado": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dd0c18c1316987cf8a741a"
+  },
+  "name": "prueba3",
+  "description": "el primer negocio de prueba",
+  "impact": "alto",
+  "years": 4,
+  "category": "ropa",
+  "estado": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dd0c9acf915c0b14649f3b"
+  },
+  "name": "Aprueba4",
+  "description": "el cuarto negocio de prueba",
+  "impact": "alto",
+  "years": 7,
+  "category": "ropa",
+  "estado": true,
+  "__v": 0
+}]

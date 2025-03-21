@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "bc9b679c-75a0-4080-aca9-c9ee830e0e26",
+		"name": "businessSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42642521"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"admin\",\r\n    \"password\":\"1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/businessSystem/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"businessSystem",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar negocios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2RjOTg2YmUxYWYxY2ZlMGQxNzU4MjgiLCJpYXQiOjE3NDI1MzU2NDgsImV4cCI6MTc0MjU1MzY0OH0.g8Cj1FygvkcxOEPBYv5VbjGrmNVrpikTqhFJiYvjMuQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/businessSystem/business/?alfa=A-Z",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"businessSystem",
+						"business",
+						""
+					],
+					"query": [
+						{
+							"key": "alfa",
+							"value": "A-Z",
+							"description": "(Opcional) Ordena los negocios (A-Z o Z-A)"
+						},
+						{
+							"key": "year",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "ropa",
+							"description": "(Opcional) Filtra por categoría",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "agregar negocio",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2RjOTg2YmUxYWYxY2ZlMGQxNzU4MjgiLCJpYXQiOjE3NDI1MzU2NDgsImV4cCI6MTc0MjU1MzY0OH0.g8Cj1FygvkcxOEPBYv5VbjGrmNVrpikTqhFJiYvjMuQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Aprueba4\",\r\n    \"description\": \"el cuarto negocio de prueba\",\r\n    \"impact\": \"alto\",\r\n    \"years\": 7,\r\n    \"category\": \"ropa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/businessSystem/business/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"businessSystem",
+						"business",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar negocio",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2RjOTg2YmUxYWYxY2ZlMGQxNzU4MjgiLCJpYXQiOjE3NDI1MzU2NDgsImV4cCI6MTc0MjU1MzY0OH0.g8Cj1FygvkcxOEPBYv5VbjGrmNVrpikTqhFJiYvjMuQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"prueba2\",\r\n    \"dscription\":\"segunda prueba del sistema\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/businessSystem/business/update/67dcfc26c1316987cf8a7406",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"businessSystem",
+						"business",
+						"update",
+						"67dcfc26c1316987cf8a7406"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reports",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2RjOTg2YmUxYWYxY2ZlMGQxNzU4MjgiLCJpYXQiOjE3NDI1NDEwMzUsImV4cCI6MTc0MjU1OTAzNX0.-ROhCV40gtNsgpQettiwb8_Ri0vpLyzwMnGpzoufOSo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/businessSystem/business/reports",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"businessSystem",
+						"business",
+						"reports"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

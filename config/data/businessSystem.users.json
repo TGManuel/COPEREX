@@ -1,0 +1,9 @@
+[{
+  "_id": {
+    "$oid": "67dc986be1af1cfe0d175828"
+  },
+  "name": "admin",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$qol02dZCa6ZrZglNS4s/5A$d1lCKohI8UZ03Gh0jRx7IjH92/Y22GS+zEiIgFIahA4",
+  "estado": true,
+  "__v": 0
+}]
